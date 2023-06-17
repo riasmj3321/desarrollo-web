@@ -1,0 +1,64 @@
+p {
+  color: blue;
+}
+
+.titulo {
+  color: blueviolet;
+}
+
+#parrafo {
+  color: rgb(128, 105, 233);
+}
+
+div p {
+  color: coral;
+}
+
+h1 {
+  color: violet;
+}
+
+h1 {
+  color: rgb(10, 122, 122);
+  font-size: 32px;
+  transition: all 0.5s linear;
+  background-color: rgb(166, 255, 0);
+}
+
+h1:hover {
+  color: red;
+  font-size: 100px;
+  background-color: chartreuse;
+}
+
+h1::after {
+  content: "PR";
+}
+
+h1::first-letter {
+  color: red;
+}
+
+h2 {
+  color: aliceblue;
+}
+
+h2::placeholder {
+  color: blueviolet;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+div h2 {
+  color: rgb(30, 154, 236);
+}
+
+html {
+  background-color: rgb(0, 0, 0);
+}
+
+.imagen {
+  height: 150px;
+  transition: all 0.5s linear;
+  background-color: rgb(244, 245, 242);
+}
