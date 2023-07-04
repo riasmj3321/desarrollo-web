@@ -8,11 +8,11 @@
 
 // console.log("el ciclo ya termino");
 
-//variable contadora es la que esta en la segunda fila
-//algo que lo detenga la que esta en la fila 4
-//El incremento lo que esta en la fila 6
+// variable contadora es la que esta en la segunda fila
+// algo que lo detenga la que esta en la fila 4
+// El incremento lo que esta en la fila 6
 
-//ciclo do while
+// ciclo do while
 // contador2 = 0;
 
 // do {
@@ -22,9 +22,9 @@
 
 // console.log("el ciclo termino");
 
-//se realiza por lo menos una vez
+// se realiza por lo menos una vez
 
-//ciclo for
+// ciclo for
 
 // for (let contador3 = 0; contador3 <= 10; contador3++) {
 //   console.log("la variable contadora es " + contador3);
@@ -32,15 +32,27 @@
 
 // console.log("el ciclo ya termino");
 
-//arrancA EN 0, PREGUNTA si cero es menor o igual a 10 <=, despues de eso le damos la orden de que si cumple con la funcion le sume uno de mas (contador3++), esto se fectuara hasta que deje de cumplir con la condicion.
+// arrancA EN 0, PREGUNTA si cero es menor o igual a 10 <=, despues de eso le damos la orden de que si cumple con la funcion le sume uno de mas (contador3++), esto se fectuara hasta que deje de cumplir con la condicion.
 
 // for (let contador = 0; contador <= 100; contador += 1) {
 //   console.log(contador);
 // }
 
-let sumatoria = 0;
+// let sumatoria = 0;
 
-for (let contador = 1; contador <= 100; contador++) {
-  sumatoria = sumatoria + contador;
-}
-console.log("resulatdo es " + sumatoria);
+// for (let contador = 1; contador <= 100; contador++) {
+//   sumatoria = sumatoria + contador;
+// }
+// console.log("resulatdo es " + sumatoria);
+
+// const numero = [5, 7, 10, 4, 8, 9, 10];
+// let sumatoria = 0;
+
+// for (let index = 0; index < numero.length; index++) {
+//   sumatoria = sumatoria + numero[index];
+// }
+// console.log(sumatoria);
+
+// codigo que suma todo lo que esta dentro de mi array
+
+//ejemplos for in
