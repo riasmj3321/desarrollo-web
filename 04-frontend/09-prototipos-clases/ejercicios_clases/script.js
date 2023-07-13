@@ -4,13 +4,14 @@ class Vehiculo {
     this.modelo = modelo;
     this.año = año;
   }
-
+  //aqui se utiliza el return para no utilizar console.log
   obtenerDetalles() {
-    console.log(`Marca: ${this.marca}`);
-    console.log(`Modelo: ${this.modelo}`);
-    console.log(`Año: ${this.año}`);
+    return `Marca: ${this.marca}, modelo: ${this.modelo}, año: ${this.año}`;
   }
 }
+//aqui se utiliza el return para no utilizar console.log
+
+const moto = new Vehiculo("yamaha", "rtx", "2001");
 
 class Automovil extends Vehiculo {
   constructor(marca, modelo, año, puertas) {
@@ -19,8 +20,7 @@ class Automovil extends Vehiculo {
   }
 
   obtenerDetalles() {
-    super.obtenerDetalles();
-    console.log(`Puertas: ${this.puertas}`);
+    return `Marca: ${this.marca}, modelo: ${this.modelo}, año: ${this.año}, puertas: ${this.puertas}`;
   }
 }
 
@@ -42,3 +42,4 @@ miAutomovil.obtenerDetalles();
 
 const miMotocicleta = new Motocicleta("Kia", "Picanto", "2020", "198");
 miMotocicleta.obtenerDetalles();
+s;
