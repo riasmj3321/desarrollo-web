@@ -25,6 +25,7 @@ const calcularIMC = () => {
   }
   // limpio los inputs
   inputPeso.value = "";
+
   inputAltura.value = "";
 };
 
