@@ -76,3 +76,12 @@ console.timeEnd("foreach");
 // });
 
 app.appendChild(lista);
+
+const h1 = document.querySelector("h1");
+
+const salu2 = function (evento) {
+  console.log(evento);
+  console.log("Has hecho click en el h1");
+};
+
+h1.addEventListener("click", salu2);
