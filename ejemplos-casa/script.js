@@ -3,77 +3,84 @@ const nombreInput = document.getElementById('nombre');
 const horaIngresoInput = document.getElementById('hora_ingreso');
 const horaSalidaInput = document.getElementById('hora_salida');
 const registrosDiv = document.getElementById('registros');
+const totalHorasSpan = document.getElementById('total');
 
-btnRegistrar.
+let totalHorasTrabajo = 0;
 
-btn
-
-
-addEventListener("click", () => {
+btnRegistrar.addEventListener("click", () => {
   
  
 const nombre = nombreInput.value;
   
  
 const horaIngreso = horaIngresoInput.value;
-  const horaSalida = horaSalidaInput.value;
+  
+ 
+const horaSalida = horaSalidaInput.value;
 
   
 
  
-
-
 if (validarHora(horaIngreso) && validarHora(horaSalida)) {
     
-    registrarIngresoSalida
-
-    registrarIngresoSal
-
    
-registrarIngresoSalida(nombre, horaIngreso, horaSalida);
-  } 
-  }
-
- 
-else {
-    
-    alert
-alert("Por favor, ingresa horas válidas en formato HH:MM.");
+registrarHoras(nombre, horaIngreso, horaSalida);
+  } else {
+    alert("Por favor, ingresa horas válidas en formato HH:MM.");
   }
 });
 
-
-  }
 function validarHora(hora) {
-  
- 
-const regex = /^([01]\d|2[0-3]):([0-5]\d)$/;
+  const regex = /^([01]\d|2[0-3]):([0-5]\d)$/;
   
  
 return regex.test(hora);
 }
 
-function registrarIngresoSalida(nombre, horaIngreso, horaSalida) {
+function registrarHoras(nombre, horaIngreso, horaSalida) {
   
  
 const registro = document.createElement('div');
   registro.
  
 classList.add('registro');
-  registro.
- 
-innerHTML = `<strong>Empleado:</strong> ${nombre}, <strong>Hora de Ingreso:</strong> ${horaIngreso}, <strong>Hora de Salida:</strong> ${horaSalida}`;
-  registrosDiv.
- 
-appendChild(registro);
+  registro.innerHTML = `<strong>Cliente:</strong> ${nombre}, <strong>Hora de Ingreso:</strong> ${horaIngreso}, <strong>Hora de Salida:</strong> ${horaSalida}`;
+  registrosDiv.appendChild(registro);
 
+  const horaInicio = new Date(`01/01/2023 ${horaIngreso}`);
   
+ 
+const horaFin = new Date(`01/01/2023 ${horaSalida}`);
+  
+ 
+const horasTrabajadas = (horaFin - horaInicio) / 3600000; // Convertir a horas
 
+  totalHorasTrabajo += horasTrabajadas;
+  totalHorasSpan.
+
+  totalHorasTrabajo += horasTrabajadas;
+  totalHorasSpan
+
+
+  totalHorasTrabajo += horasTrabajadas;
  
 
 
-// Limpia los campos después de registrar el ingreso/salida
-  nombreInput.value = "";
+  totalHorasTrabajo += horasTrabajadas;
+
+
+  totalHor
+
+
+
+textContent = totalHorasTrabajo.toFixed(2);
+
+
+
+// Limpia los campos después de registrar las horas
+  nombreInput.
+ 
+value = "";
   horaIngresoInput.
  
 value = "";
