@@ -46,6 +46,19 @@ footer {
 section {
   padding: 2rem;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .menu-lateral {
@@ -101,4 +114,56 @@ section {
   justify-content: center;
   width: 4.5rem;
   height: 4.5rem;
+}
+
+.calculadora {
+  background-color: var(--color-principal);
+  color: var(--letra-colorsecundario);
+  width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pantalla {
+  grid-column: 1/-1;
+  background-color: #000;
+  color: var(--letra-colorsecundario);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  overflow: auto;
+}
+
+.btn-claculadora {
+  color: var(--letra-color);
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-claculadora:hover {
+  background-color: #6cace7;
+}
+
+#cero {
+  grid-column: span 2;
+}
+
+#igual {
+  grid-row: span 2;
+  background-color: #000000;
+  color: #eef2f7;
+}
+
+#igual:hover {
+  background-color: #eef2f7;
 }
