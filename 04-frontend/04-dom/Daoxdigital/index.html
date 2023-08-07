@@ -3,97 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicios con el DOM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+      integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Daox DIigtal</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
-    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet"
-  />
   <body>
-    <header>
-      <div>Daox Digital</div>
+    <header class="header">
+      <div>Bienvenidos Daox Digital</div>
     </header>
     <aside class="menu-lateral">
       <nav>
-        <a href="#seccion1">Quienes somos</a>
+        <a href="#seccion1">Quienes Somos</a>
         <a href="#seccion2">Reloj digital</a>
         <a href="#seccion3">Calculadora</a>
         <a href="#seccion4">Contacto</a>
       </nav>
     </aside>
     <main>
-      <h1>Bienvenidos a Daox Digital</h1>
-      <p>Facil y rapido servicio de calidad</p>
-      <section id="seccion1">Quienes somos</section>
-      <section id="seccion2">Reloj digital</section>
-      <h2>reloj digital</h2>
-      <div id="reloj">Fecha y Hora</div>
-      <button id="btn-activar">Activar Reloj</button>
-      <button id="btn-desactivar">Desactivar Reloj</button>
-      <section id="seccion3">Calculadora</section>
-      <h2>Calculadora</h2>
-      <div class="calculadora">
-        <div class="pantalla">0</div>
-        <button class="btn-claculadora" id="c">C</button>
-        <button class="btn-claculadora" id="borrar">←</button>
-        <button class="btn-claculadora">/</button>
-        <button class="btn-claculadora">*</button>
-        <button class="btn-claculadora">7</button>
-        <button class="btn-claculadora">8</button>
-        <button class="btn-claculadora">9</button>
-        <button class="btn-claculadora">-</button>
-        <button class="btn-claculadora">4</button>
-        <button class="btn-claculadora">5</button>
-        <button class="btn-claculadora">6</button>
-        <button class="btn-claculadora">+</button>
-        <button class="btn-claculadora">1</button>
-        <button class="btn-claculadora">2</button>
-        <button class="btn-claculadora">3</button>
-        <button class="btn-claculadora" id="igual">DAOX</button>
-        <button class="btn-claculadora" id="cero">0</button>
-        <button class="btn-claculadora">.</button>
-      </div>
+      <section id="seccion1">
+        <h1>Daox Digital</h1>
+        <p>Facil y Rapido Servicios de Calidad</p>
+      </section>
+      <section id="seccion2">
+        <h2>Reloj digital</h2>
+        <div id="reloj"></div>
+        <button id="btn-activar-reloj">Activar reloj</button>
+        <button id="btn-desactivar-reloj">Desactivar reloj</button>
+      </section>
+      <section id="seccion3">
+        <h2>Calculadora</h2>
+        <div class="calculadora">
+          <div class="pantalla">0</div>
+
+          <button class="btn-calculadora" id="c">C</button>
+          <button class="btn-calculadora" id="borrar">←</button>
+          <button class="btn-calculadora">/</button>
+          <button class="btn-calculadora">*</button>
+          <button class="btn-calculadora">7</button>
+          <button class="btn-calculadora">8</button>
+          <button class="btn-calculadora">9</button>
+          <button class="btn-calculadora">-</button>
+          <button class="btn-calculadora">4</button>
+          <button class="btn-calculadora">5</button>
+          <button class="btn-calculadora">6</button>
+          <button class="btn-calculadora">+</button>
+          <button class="btn-calculadora">1</button>
+          <button class="btn-calculadora">2</button>
+          <button class="btn-calculadora">3</button>
+          <button class="btn-calculadora" id="igual">=</button>
+          <button class="btn-calculadora" id="cero">0</button>
+          <button class="btn-calculadora">.</button>
+        </div>
+      </section>
       <section id="seccion4">
         <h2>Contacto</h2>
-        <form action="https://formsubmit.co/popoeto@gmail.com" method="POST">
+        <form
+          action="https://formsubmit.co/popoeto@gmail.com"
+          method="POST"
+        >
           <input
             type="text"
-            name="Nombre"
+            name="nombre"
             required
-            placeholder="Nombre Aqui.."
+            placeholder="Nombre aqui..."
           />
           <input
             type="email"
-            name="email"
+            name="correo"
             required
-            placeholder="Email Aqui..."
+            placeholder="Correo aqui..."
           />
           <button type="submit">Enviar</button>
         </form>
       </section>
     </main>
-    <footer>
-      <div class="reservados">Derechos Rservados: Andres Riascos</div>
-
-      <button
-        class="btn-contenedor hamburger hamburger--Arrowalt"
-        type="button"
-      >
+    <footer class="footer">
+      <div>Derechos reservado: Andres Riascos</div>
+      <button class="btn-contenedor hamburger hamburger--slider" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
     </footer>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

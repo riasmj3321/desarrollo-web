@@ -1,15 +1,17 @@
 body {
-  
- 
-    font-family: Arial, sans-serif;
-      
-     
-    background-color: #8ec7ec;
-      
-     
-    margin: 0;
-      padding: 0;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("imagenesdaox/logodaox.jpg"); /* Cambia 'background.jpg' por la ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  padding: 100px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para resaltar el contenido */
+}
     
     .container {
       

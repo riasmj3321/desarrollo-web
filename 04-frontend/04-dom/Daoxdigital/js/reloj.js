@@ -1,20 +1,22 @@
 const d = document;
+
 export function reloj() {
-  let relojtiempo;
+  let relojTiempo;
 
   d.addEventListener("click", (e) => {
-    if (e.target.matches("#btn-activar")) {
-      relojtiempo = setInterval(() => {
-        let relojhora = new Date().toLocaleString();
-        d.querySelector("#reloj").textContent = relojhora;
+    // Si el elemento que se hace click coincide con el id del boton activar-reloj
+    if (e.target.matches("#btn-activar-reloj")) {
+      relojTiempo = setInterval(() => {
+        let relojHora = new Date().toLocaleString();
+        d.querySelector("#reloj").innerHTML = "<h3>" + relojHora + "</h3>";
       }, 1000);
       e.target.disabled = true;
     }
-
-    if (e.target.matches("#btn-desactivar")) {
-      clearInterval(relojtiempo);
-      d.querySelector("#btn-activar").disabled = false;
-      d.querySelector("#reloj").textContent = null;
+    // Si el elemento que se hace click coincide con el id del boton desactivar-reloj
+    if (e.target.matches("#btn-desactivar-reloj")) {
+      clearInterval(relojTiempo);
+      d.querySelector("#btn-activar-reloj").disabled = false;
+      d.querySelector("#reloj").innerHTML = null;
     }
   });
 }
