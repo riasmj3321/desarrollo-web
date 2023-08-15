@@ -14,7 +14,14 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .character-card {
+  width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta */
   border: 1px solid #ccc;
   padding: 20px;
   margin-top: 20px;
@@ -34,4 +41,25 @@ body {
 
 .character-card p {
   margin: 5px 0;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination-link {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #eee;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination-link.active {
+  background-color: #007bff;
+  color: #fff;
 }

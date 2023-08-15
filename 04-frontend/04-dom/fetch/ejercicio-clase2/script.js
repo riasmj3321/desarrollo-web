@@ -1,8 +1,8 @@
 const apiUrl = 'https://rickandmortyapi.com/api/character/';
 
-async function fetchCharacterDetails(characterId) {
+async function fetchCharacterList(page) {
   try {
-    const response = await fetch(apiUrl + characterId);
+    const response = await fetch(apiUrl + `?page=${page}`);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -11,28 +11,50 @@ async function fetchCharacterDetails(characterId) {
   }
 }
 
-async function displayCharacterDetails(characterId) {
-  const characterDetails = await fetchCharacterDetails(characterId);
-  const characterDetailsContainer = document.getElementById('character-details');
+function createPaginationLinks(pages, currentPage) {
+  const paginationContainer = document.getElementById('pagination');
 
-  if (characterDetails) {
-    // Crear el contenido a mostrar
-    const characterInfo = `
-      <div class="character-card">
-        <h2>${characterDetails.name}</h2>
-        <img src="${characterDetails.image}" alt="${characterDetails.name}">
-        <p>Género: ${characterDetails.gender}</p>
-        <p>Especie: ${characterDetails.species}</p>
-        <!-- Agrega más propiedades según tus necesidades -->
-      </div>
-    `;
+  let paginationHTML = '';
+  for (let i = 1; i <= pages; i++) {
+    paginationHTML += `<a href="#" class="pagination-link ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</a>`;
+  }
 
-    // Insertar el contenido en el contenedor del DOM
-    characterDetailsContainer.innerHTML = characterInfo;
+  paginationContainer.innerHTML = paginationHTML;
+
+  const paginationLinks = document.querySelectorAll('.pagination-link');
+  paginationLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const newPage = parseInt(link.getAttribute('data-page'));
+      displayCharacterList(newPage);
+    });
+  });
+}
+
+async function displayCharacterList(page = 1) {
+  const characterData = await fetchCharacterList(page);
+
+  if (characterData) {
+    const characterListContainer = document.getElementById('character-list');
+    characterListContainer.innerHTML = ''; // Limpiar el contenido actual
+
+    characterData.results.forEach(character => {
+      const characterCard = `
+        <div class="character-card">
+          <h2>${character.name}</h2>
+          <img src="${character.image}" alt="${character.name}">
+          <p>Género: ${character.gender}</p>
+          <p>Especie: ${character.species}</p>
+          <!-- Agrega más propiedades según tus necesidades -->
+        </div>
+      `;
+      characterListContainer.insertAdjacentHTML('beforeend', characterCard);
+    });
+
+    createPaginationLinks(characterData.info.pages, page);
   } else {
-    characterDetailsContainer.textContent = 'No se pudieron obtener los detalles del personaje.';
+    characterListContainer.textContent = 'No se pudieron obtener los personajes.';
   }
 }
 
-// Llamada a displayCharacterDetails con un ID de personaje específico
-displayCharacterDetails(18); // Cambia el número a un ID válido
+displayCharacterList(); // Mostrar la lista de personajes al cargar la página
