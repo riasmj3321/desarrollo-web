@@ -35,5 +35,5 @@ async function displayCharacterDetails(characterId) {
 }
 
 // Llamada a displayCharacterDetails con un ID de personaje específico
-displayCharacterDetails(1); // Cambia el número a un ID válido
+displayCharacterDetails(5); // Cambia el número a un ID válido
 
