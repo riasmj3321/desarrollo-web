@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Turnos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Generador de Turnos</h1>
+    </header>
+    
+    <section class="container">
+        <div class="form-container">
+            <h2>Agregar Trabajadores</h2>
+            <input type="text" id="nuevo-trabajador" placeholder="Nombre del Trabajador">
+            <button id="agregar-trabajador">Agregar</button>
+        </div>
+
+        <section class="container">
+            <div class="result-container">
+                <button id="generar-turnos">Generar Turnos</button>
+                <ul id="lista-trabajadores">
+                    <!-- Aquí se mostrarán los trabajadores y sus turnos asignados -->
+                </ul>
+            </div>
+            <div id="descripciones-turnos" class="descripciones-container"></div>
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
